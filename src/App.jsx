@@ -1,11 +1,14 @@
-
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import Chess from "./pages/Chess"
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={Chess}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
