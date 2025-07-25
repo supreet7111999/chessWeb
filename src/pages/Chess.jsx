@@ -4,11 +4,13 @@ import { useEffect } from 'react';
 
 
 function Chess() {
-  const test=()=>{
-    socket.emit("churan");
-  }
+  // const test=()=>{
+  //   socket.emit("churan");
+  // }
   useEffect(()=>{
-    test();
+    // test();
+    socket.emit("churan");
+    console.log("churran");
   },[])
   const chessboardOptions = {
     // your config options here
