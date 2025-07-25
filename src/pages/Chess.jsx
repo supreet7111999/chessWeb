@@ -1,9 +1,25 @@
-import React from 'react'
+import { Chessboard } from 'react-chessboard';
+import {socket} from '../utils/socket';
+import { useEffect } from 'react';
 
-const Chess = () => {
+
+function Chess() {
+  const test=()=>{
+    socket.emit("churan");
+  }
+  useEffect(()=>{
+    test();
+  },[])
+  const chessboardOptions = {
+    // your config options here
+    allowAutoScroll:true
+  };
+
   return (
-    <div>Chess</div>
-  )
+    <div style={{width:'700px',margin:'auto',height:'700px'}}>
+        <Chessboard options={chessboardOptions} />
+    </div>
+  );
 }
 
-export default Chess
+export default Chess;
